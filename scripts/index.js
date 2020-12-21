@@ -10,21 +10,15 @@ const playerBtn = document.querySelectorAll('.player-btn'),
 
 const deactivationPlayer = () => {
     temp.style.display = 'none';
-    playerBtn.forEach((item) => {
-        item.classList.remove('active');
-    });
-    playerBlock.forEach((item) => {
-        item.classList.remove('active');
-    });
+    playerBtn.forEach(item => item.classList.remove('active'));
+    playerBlock.forEach(item => item.classList.remove('active'));
 };
 
-playerBtn.forEach((btn, i) => {
-    btn.addEventListener('click', () => {
+playerBtn.forEach((btn, i) => btn.addEventListener('click', () => {
         deactivationPlayer();
         btn.classList.add('active');
         playerBlock[i].classList.add('active');
-    });
-});
+}));
 
 radioPlayerInit();
 musicPlayerInit();
