@@ -47,8 +47,8 @@ export const videoPlayerInit = () => {
         let minuteTotal = Math.floor(duration / 60),
             secondsTotal = Math.floor(duration % 60);
 
-        videoTimePassed.textContent = addZero(minutePassed) + ':' + addZero(secondsPassed);
-        videoTimeTotal.textContent = addZero(minuteTotal) + ':' + addZero(secondsTotal);
+        videoTimePassed.textContent = `${addZero(minutePassed)}:${addZero(secondsPassed)}`;
+        videoTimeTotal.textContent = `${addZero(minuteTotal)}:${addZero(secondsTotal)}`;
     });
 
     videoButtonPlay.addEventListener('click', togglePlay);
